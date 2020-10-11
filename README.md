@@ -21,6 +21,10 @@ Currently, there are three backend implementations available in the program.  Th
 first implementation performs the password guessing in a single thread and can be found in the single\_threaded.clj file.  The second implementation, in agents\_only.clj, uses agents to guess passwords on multiple threads.  A third implementation using LinkedBlockingQueue, from java\.util\.concurrent, and Threads
 can be found in blocking\_queue.clj.
 
+### Feedback
+
+Questions or comments on the code are welcome.
+
 # Installation
 
 You'll need [leiningen](https://leiningen.org/) to build and/or run the program.  Follow the instructions on the [leiningen](https://leiningen.org/) website to

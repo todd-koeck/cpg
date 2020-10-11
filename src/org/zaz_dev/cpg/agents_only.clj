@@ -7,7 +7,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;
 ;;;; I don't think agents are a very good fit for this type of
-;;;; task as for several reasons.  However, they were the first
+;;;; task for several reasons.  However, they were the first
 ;;;; thing I noticed that provide multi-threading in clojure, so
 ;;;; I wrote something that used them.
 ;;;;
@@ -63,6 +63,9 @@
 
             ;; I'm using await to throttle how fast I'm sending passwords
             ;; to the agents.  I don't expect this is a good thing to do.
+            ;; However, without await or another mechanism that causes this
+            ;; function to block, all the passwords are immediately sent
+            ;; to the agents.
             (await ag)
 
             ;; send-off is used as it uses an expanding Thread pool to
