@@ -1,6 +1,6 @@
 *~
-/checkouts/
 *.backup
+/checkouts/
 *.class
 /classes/
 .cpcache/
